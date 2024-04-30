@@ -1,0 +1,46 @@
+{ 
+  "students": [
+ {
+  "id": 1,
+  "name": "Hamilton",
+  "location": "Coimbatore",
+  "phone": "9890875645",
+  "courses": [
+    "NodeJS",
+    "ReactJS"
+    ]
+  },
+
+{
+  "id": 2,
+  "name": "Hamanth John",
+  "location": "Chennai",
+  "phone": "9005698089",
+  "courses": [
+    ".Net",
+    "Angular"
+    ]
+  },
+{
+  "id": 3,
+  "name": "Harini Jeba",
+  "location": "Coimbatore",
+  "phone": "9876765645",
+  "courses": [
+    "Laravel",
+    "VueJS"
+    ]
+  },
+
+{
+  "id": 4,
+  "name": "Rubus Franco",
+  "location": "Chennai",
+  "phone": "8890965645",
+  "courses": [
+    "Spring",
+    "ReactJS"
+    ]
+  }
+]
+}
