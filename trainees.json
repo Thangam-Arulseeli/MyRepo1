@@ -1,0 +1,183 @@
+{
+  "training": [
+    {
+      "id": "1",
+      "name": "Hamilton",
+      "age": 23,
+      "location": "Coimbatore",
+      "phone": "9890875645",
+      "courses": [
+        "NodeJS",
+        "ReactJS"
+      ]
+    },
+    {
+      "name": "Princes",
+      "age": 26,
+      "location": "Mumbai",
+      "phone": "9870065005",
+      "courses": [
+        "Laravel",
+        "Vue JS"
+      ],
+      "id": "2"
+    },
+    {
+      "name": "RajKumar",
+      "age": 26,
+      "location": "Mumbai-North",
+      "phone": "9870065005",
+      "courses": [
+        "JMeter",
+        "Swagger"
+      ],
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "name": "Princes",
+      "age": 30,
+      "location": "Madurai",
+      "phone": "9870065645",
+      "courses": [
+        "Selenium",
+        "Cucumber"
+      ]
+    },
+    {
+      "id": "c3a9",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "9380",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "7c3b",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "770f",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "fb42",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "0964",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "82c2",
+      "name": "Emmanuel",
+      "age": 40,
+      "location": "Mumbai",
+      "phone": "9870065645",
+      "courses": [
+        "Postman",
+        "Swagger"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Jeeva Raj",
+      "gender": "Male",
+      "email": "jeevaraj@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "Selva Raj",
+      "gender": "Male",
+      "email": "selvaraj@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "name": "Prema Latha",
+      "gender": "Female",
+      "email": "premalatha@hotmail.com",
+      "status": "InActive"
+    },
+    {
+      "id": "f647",
+      "name": "Rajkumar",
+      "gender": "Male",
+      "email": "rajkumar@gamil.com",
+      "status": "Active"
+    },
+    {
+      "id": "0786",
+      "name": "Denesh",
+      "gender": "Male",
+      "email": "denesh@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "b151",
+      "name": "Emmanuel",
+      "gender": "Male",
+      "email": "emmanuel@gmail.com",
+      "status": "Inactive"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "1",
+      "candidateName": "Kavin Franco",
+      "qualifiaction": "B.Sc",
+      "resume": "D:\\CGVAK\\TestingTools\\API Testing\\PostMan\\Ses-7.docx"
+    },
+    {
+      "id": "0f8b",
+      "candidateName": "Shalini",
+      "qualifiaction": "B.Com",
+      "resume": "D:\\CGVAK\\TestingTools\\API Testing\\PostMan\\Ses-7.docx"
+    }
+  ]
+}

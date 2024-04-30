@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "4f7a0ab0-94c5-4089-af66-a740bb99c170",
+		"name": "Trainees Collection - Validations",
+		"description": "This collection contains all the methods of trainees objects with validations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21960836"
+	},
+	"item": [
+		{
+			"name": "Get All Trainees",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1. To test the status code\r",
+							"// 1.1. Checking the single staus code \r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200); // Assertion\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// 1.2. To save multiple status code for one request\r",
+							"pm.test(\"Successful GET request\", () => {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// 2.1. To check GET request status code text\r",
+							"pm.test(\"GET Request-Status Code String\", () => {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// 3. Example for checking header name\r",
+							"// 3.1 Check that response header is present\r",
+							"pm.test(\"Content-Type header is present\", () =>{\r",
+							"   pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// 4. Example for checking header name and value\r",
+							"// Test for the repose header having a particular value\r",
+							"pm.test(\"Content-Type headers is application/json\", () => {\r",
+							"   // pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"})\r",
+							"\r",
+							"\r",
+							"// 5. Example for Testing Cookies\r",
+							"// 5.1 Test if a cookie is present in the response:\r",
+							"pm.test(\"Cookie 'language' is present\", () => {\r",
+							"  pm.expect(pm.cookies.has('language')).to.be.false;\r",
+							"});\r",
+							"\r",
+							"// 5.2 Test For a particular cookie values\r",
+							"pm.test(\"Cookie language has 1 value\", () => {\r",
+							"    pm.expect(pm.cookies.get('language')).to.eql('en-gb');\r",
+							"});\r",
+							"\r",
+							"// 6.1. Example for testing response time\r",
+							"// Test for the response time will be more / less\r",
+							" pm.test(\"Response time is above 10\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.above(10);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// 6.2. Example for testing response time\r",
+							"// Test for the response time will be within the specific range\r",
+							"pm.test(\"Response time is between 20 and  40ms\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.above(20).below(40);\r",
+							"});\r",
+							"\r",
+							"// 6.2. Example for testing response time\r",
+							"// Test for the response time will be within the specific range\r",
+							"pm.test(\"Response time is below 20\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(40);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlGlobal}}/training",
+					"host": [
+						"{{urlGlobal}}"
+					],
+					"path": [
+						"training"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Trainees",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();  // variable declared outside the function, which is accessed by all the functions\r",
+							"// 7. Response validation\r",
+							"// 7.1. Checking the data type of individual data \r",
+							"// NOTE: Order of the field is not important\r",
+							"pm.test(\"Test the data type of the response\", () => {\r",
+							"   pm.expect(jsonData).to.be.an(\"object\");\r",
+							"   pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"   pm.expect(jsonData.phone).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+							"      pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.location).to.be.a(\"string\");\r",
+							"      pm.expect(jsonData.age).to.be.a(\"number\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"// 7.2. Test array contents in response body \r",
+							"pm.test(\"Checking array properties\", () => {\r",
+							"   // Courses includes Laravel\r",
+							"       pm.expect(jsonData.courses).to.include(\"Laravel\");\r",
+							"  // Courses array must include all listed data\r",
+							"      pm.expect(jsonData.courses).to.have.members([\"Laravel\",\"VueJS\"]);\r",
+							"    pm.expect(jsonData.location).to.be.a(\"string\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Check the value of the fields\r",
+							"pm.test(\"Value of location field in Response\", () => {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"3\");\r",
+							"    pm.expect(jsonData.name).to.eql(\"Harini Jeba\");\r",
+							"    pm.expect(jsonData.location).to.eql(\"Coimbatore\");\r",
+							"    pm.expect(jsonData.phone).to.eql(\"9876765645\");\r",
+							"    pm.expect(jsonData.age).to.eql(20);\r",
+							"    pm.expect(jsonData.courses[0]).to.eql(\"Laravel\");\r",
+							"    pm.expect(jsonData.courses[1]).to.eql(\"VueJS\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"/// Validating the schema\r",
+							"var jsonResponse = {\r",
+							"    \"id\": \"3\",\r",
+							"    \"name\": \"Harini Jeba\",\r",
+							"    \"age\": 20,\r",
+							"    \"location\": \"Coimbatore\",\r",
+							"    \"phone\": \"9876765645\",\r",
+							"    \"courses\": [\r",
+							"        \"Laravel\",\r",
+							"        \"VueJS\"\r",
+							"    ]\r",
+							"}\r",
+							"\r",
+							"var schema = {\r",
+							"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"id\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"name\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age\": {\r",
+							"      \"type\": \"integer\"\r",
+							"    },\r",
+							"    \"location\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"phone\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"courses\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"id\",\r",
+							"    \"name\",\r",
+							"    \"age\",\r",
+							"    \"location\",\r",
+							"    \"phone\",\r",
+							"    \"courses\"\r",
+							"  ]\r",
+							"}\r",
+							"\r",
+							"    pm.test('Schema is valid', function() {\r",
+							"        pm.expect(tv4.validate(jsonResponse, schema )).to.be.true;\r",
+							"    });\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/training/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"training",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Trainee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 2.1. To check GET request status code text\r",
+							"pm.test(\"GET Request-Status Code String\", () => {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							"//  Checking the single staus code \r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(201); // Assertion\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Emmanuel\",\r\n    \"age\": 40,\r\n    \"location\": \"Mumbai\",\r\n    \"phone\": \"9870065645\",\r\n    \"courses\": [\r\n        \"Postman\",\r\n        \"Swagger\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/training",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"training"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Trainee",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Local Variable\r",
+							"pm.variables.set(\"urlLocal\", \"http://localhost:3000\");\r",
+							"\r",
+							"// Global variable creation\r",
+							"pm.globals.set(\"userid_global\",\"4\")\r",
+							"\r",
+							"// Environment variable creation\r",
+							"pm.environment.set(\"userid_dev_env\", \"9\")\r",
+							"\r",
+							"// Collection variables\r",
+							"pm.collectionVariables.set(\"userid_collection\",\"5\");\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Get global variable\r",
+							"var uid_global = pm.globals.get(\"userid_global\");\r",
+							"console.log(\"Global Variable = \" + pm.globals.get(\"userid_global\"));\r",
+							"\r",
+							"// Get Environment variable\r",
+							"var uid_dev_env = pm.environment.get(\"userid_dev_env\");\r",
+							"console.log(\"Environment Variable = \" + pm.environment.get(\"userid_dev_env\"));\r",
+							"\r",
+							"// get Collection variable\r",
+							"var uid_colln = pm.collectionVariables.get(\"userid_collection\");\r",
+							"console.log(\"Collection Variable = \" + pm.collectionVariables.get(\"userid_collection\"));\r",
+							"\r",
+							"\r",
+							"console.log(\"Global UID = \"+ uid_global);\r",
+							"console.log(\"Environment variable = \" + uid_dev_env);\r",
+							"console.log(\"Collection variable = \" + uid_colln);\r",
+							"\r",
+							"// Global variable -- Removal\r",
+							"pm.globals.unset(\"userid_global\")\r",
+							"\r",
+							"// Environment variable -- Removal\r",
+							"pm.environment.unset(\"userid_dev_env\")\r",
+							"\r",
+							"// Collection variables -- Removal\r",
+							"pm.collectionVariables.unset(\"userid_collection\");\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"RajKumar\",\r\n    \"age\": 26,\r\n    \"location\": \"Mumbai-North\",\r\n    \"phone\": \"9870065005\",\r\n    \"courses\": [\r\n        \"JMeter\",\r\n        \"Swagger\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/training/{{userid_global}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"training",
+						"{{userid_global}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Specific - Patch ",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Princes\",\r\n    \"age\": 30,\r\n    \"location\": \"Madurai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/training/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"training",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Trainee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/training/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"training",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

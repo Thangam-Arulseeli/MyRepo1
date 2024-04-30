@@ -1,0 +1,334 @@
+{
+  "students": [
+    {
+      "name": "Hamilton Juna",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "C",
+        "C++"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Hamanth John",
+      "location": "Chennai",
+      "phone": "9005698089",
+      "courses": [
+        ".Net",
+        "Angular"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Harini Jeba",
+      "location": "Coimbatore",
+      "phone": "9876765645",
+      "courses": [
+        "Laravel",
+        "VueJS"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Rubus Franco",
+      "location": "Chennai",
+      "phone": "8890965645",
+      "courses": [
+        "Spring",
+        "ReactJS"
+      ]
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "5"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "9"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "10"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "11"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "12"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "13"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "16"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "17"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "18"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "19"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "20"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "21"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "22"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "23"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "24"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "25"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "26"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "27"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "28"
+    },
+    {
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ],
+      "id": "29"
+    },
+    {
+      "id": "67f2",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "fab9",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "8c08",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "cc11",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "faaf",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "5826",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    },
+    {
+      "id": "5c0e",
+      "name": "William",
+      "location": "Mumbai",
+      "phone": "7890987779",
+      "courses": [
+        "PostMan",
+        "Swagger"
+      ]
+    }
+  ]
+}

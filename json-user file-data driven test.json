@@ -1,0 +1,14 @@
+[
+  {
+    "name": "rubus",
+    "gender": "male",
+    "email": "rubus@gamil.com",
+    "status": "active"
+  },
+  {
+    "name": "genny hop",
+    "gender": "female",
+    "email": "genny@gmail.com",
+    "status": "inactive"
+  }
+]
